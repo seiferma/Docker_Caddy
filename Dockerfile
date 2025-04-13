@@ -4,13 +4,14 @@ ARG TARGETARCH
 ARG CADDY_VERSION=latest
 ARG GOOS=linux
 ARG CGOENABLED=0
+ARG XCADDY_ARGS=
 
 RUN apk add --no-cache git
 RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@$CADDY_VERSION
 RUN export GOARCH=$TARGETARCH && \
     xcaddy build \
-      --with github.com/caddy-dns/he \
-      --replace github.com/caddyserver/certmagic=github.com/caddyserver/certmagic@latest
+      --replace github.com/caddyserver/certmagic=github.com/caddyserver/certmagic@latest \
+      $XCADDY_ARGS
 RUN apk add --no-cache libcap
 RUN setcap cap_net_bind_service=+ep /go/caddy
 RUN touch /tmp/empty

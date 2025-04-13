@@ -1,9 +1,9 @@
-# Docker_CaddyWithHe
-[![](https://github.com/seiferma/Docker_CaddyWithHe/actions/workflows/docker-deploy.yml/badge.svg?branch=main)](https://github.com/seiferma/Docker_CaddyWithHe/actions?query=branch%3Amain+)
-[![](https://img.shields.io/github/issues/seiferma/Docker_CaddyWithHe.svg)](https://github.com/seiferma/Docker_CaddyWithHe/issues)
-[![](https://img.shields.io/github/license/seiferma/Docker_CaddyWithHe.svg)](https://github.com/seiferma/Docker_CaddyWithHe/blob/main/LICENSE)
+# Docker_Caddy
+[![](https://github.com/seiferma/Docker_Caddy/actions/workflows/docker-deploy.yml/badge.svg?branch=main)](https://github.com/seiferma/Docker_Caddy/actions?query=branch%3Amain+)
+[![](https://img.shields.io/github/issues/seiferma/Docker_Caddy.svg)](https://github.com/seiferma/Docker_Caddy/issues)
+[![](https://img.shields.io/github/license/seiferma/Docker_Caddy.svg)](https://github.com/seiferma/Docker_Caddy/blob/main/LICENSE)
 
-Docker image containing the latest stable caddy version including the [he dns provider](https://github.com/caddy-dns/he).
+Docker image containing the latest stable caddy version in various variants.
 
 ## Usage
-The docker image is available under `quay.io/seiferma/caddy-he` (see the [registry page](https://quay.io/repository/seiferma/caddy-he?tab=tags) for available versions). The image is available for linux using amd64 or arm64.
+The docker image is available under `quay.io/seiferma/caddy` (see the [registry page](https://quay.io/repository/seiferma/caddy?tab=tags) for available versions). The image is available for linux using amd64 or arm64.
