@@ -1,5 +1,6 @@
 variable "VERSION" {
-  default = "latest"
+  # renovate: datasource=go depName=github.com/caddyserver/caddy/v2
+  default = "v2.9.1"
 }
 
 target "default" {
@@ -21,7 +22,10 @@ target "default" {
     ]
   }
   platforms = ["linux/amd64", "linux/arm64"]
-  tags = ["${trimsuffix("quay.io/seiferma/caddy:${VERSION}-${item.tag-suffix}", "-")}"]
+  tags = [
+    "${trimsuffix("quay.io/seiferma/caddy:${VERSION}-${item.tag-suffix}", "-")}",
+    "${trimsuffix("quay.io/seiferma/caddy:latest-${item.tag-suffix}", "-")}"
+  ]
   args = {
     CADDY_VERSION = "${VERSION}",
     XCADDY_ARGS = "${item.xcaddy-args}"
