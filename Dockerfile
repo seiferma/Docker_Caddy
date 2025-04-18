@@ -6,7 +6,7 @@ ARG CGOENABLED=0
 ARG CADDY_VERSION=
 ARG XCADDY_ARGS=
 # renovate: datasource=go depName=github.com/caddyserver/certmagic
-ARG CERTMAGIC_VERSION=v0.22.2
+ARG CERTMAGIC_VERSION=v0.23.0
 
 RUN apk add --no-cache git
 RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
