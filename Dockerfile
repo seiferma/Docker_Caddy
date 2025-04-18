@@ -5,14 +5,11 @@ ARG GOOS=linux
 ARG CGOENABLED=0
 ARG CADDY_VERSION=
 ARG XCADDY_ARGS=
-# renovate: datasource=go depName=github.com/caddyserver/certmagic
-ARG CERTMAGIC_VERSION=v0.22.2
 
 RUN apk add --no-cache git
 RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
 RUN export GOARCH=$TARGETARCH && \
     xcaddy build $CADDY_VERSION \
-      --replace github.com/caddyserver/certmagic=github.com/caddyserver/certmagic@$CERTMAGIC_VERSION \
       $XCADDY_ARGS
 RUN apk add --no-cache libcap
 RUN setcap cap_net_bind_service=+ep /go/caddy
