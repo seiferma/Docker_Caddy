@@ -10,7 +10,7 @@ RUN apk add --no-cache git
 RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@$CADDY_VERSION
 RUN export GOARCH=$TARGETARCH && \
     xcaddy build \
-      --replace github.com/caddyserver/certmagic=github.com/caddyserver/certmagic@latest \
+      --replace github.com/caddyserver/certmagic=github.com/caddyserver/certmagic@v0.22.1 \
       $XCADDY_ARGS
 RUN apk add --no-cache libcap
 RUN setcap cap_net_bind_service=+ep /go/caddy
