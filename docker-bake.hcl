@@ -12,10 +12,6 @@ target "default" {
         tag-suffix = ""
       },
       {
-        xcaddy-args = "--with github.com/caddy-dns/he"
-        tag-suffix = "he-dns"
-      },
-      {
         xcaddy-args = "--with github.com/caddy-dns/acmedns"
         tag-suffix = "acme-dns"
       }
