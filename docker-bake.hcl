@@ -1,6 +1,6 @@
 variable "VERSION" {
   # renovate: datasource=go depName=github.com/caddyserver/caddy/v2
-  default = "v2.10.2"
+  default = "v2.11.1"
 }
 
 target "default" {
