@@ -14,6 +14,10 @@ target "default" {
       {
         xcaddy-args = "--with github.com/caddy-dns/acmedns"
         tag-suffix = "acme-dns"
+      },
+      {
+        xcaddy-args = "--with github.com/hslatman/caddy-crowdsec-bouncer/http --with github.com/hslatman/caddy-crowdsec-bouncer/layer4 --with github.com/hslatman/caddy-crowdsec-bouncer/appsec"
+        tag-suffix = "crowdsec"
       }
     ]
   }
